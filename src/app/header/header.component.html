@@ -1,0 +1,24 @@
+
+<mat-toolbar color="primary" fxLayoutAlign="space-between center">
+<h1>Mon premier site ANGULAR</h1>
+<button mat-button [matMenuTriggerFor]="menu">Menu
+    <mat-icon>list</mat-icon>
+</button>
+</mat-toolbar>
+
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item [style.color]= "appService.selectedMenu == 'Home' ? 'red' : 'black'" 
+    routerLink="/"><mat-icon>home</mat-icon>Home</button>
+    <button mat-menu-item  [style.color]= "appService.selectedMenu == 'Skills' ? 'red' : 'black'" 
+    routerLink="/skills"><mat-icon>build</mat-icon>Skills</button>
+    <button mat-menu-item [style.color]= "appService.selectedMenu == 'Experience' ? 'red' : 'black'" 
+    routerLink="/experience"><mat-icon>book</mat-icon>Experience</button>
+    <button mat-menu-item [style.color]="appService.selectedMenu == 'Contact' ? 'red' : 'black'" 
+    routerLink="/contact"><mat-icon>contact_mail</mat-icon>Contact</button>
+    <button mat-menu-item [style.color]="appService.selectedMenu == 'TodoList' ? 'red' : 'black'" 
+    routerLink="/todo-comp"><mat-icon>today</mat-icon>Gestion TODO</button>
+</mat-menu>
+
+
+
